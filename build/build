@@ -7,8 +7,8 @@ REPO=$HOME/xdg-app-repos/terminix
 echo "Removing build dir..."
 rm -rf $BUILD_DIR
 
-echo "Building with xdg-app-builder..."
-xdg-app-builder --repo=$REPO $BUILD_DIR $JSON
+echo "Building with flatpak-builder..."
+flatpak-builder --repo=$REPO $BUILD_DIR $JSON
 
 echo "Creating bundle file..."
-xdg-app build-bundle $REPO terminix.x86_64.xdgapp com.gexperts.Terminix master
+xdg-app build-bundle $REPO terminix.x86_64.flatpak com.gexperts.Terminix master
